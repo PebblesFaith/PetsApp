@@ -1,0 +1,27 @@
+{
+  "name": "petsapp",
+  "version": "1.0.0",
+  "description": "I have created PetsApp repository in order to practice thoroughly comprehend RESTful API that communicates with Node.js dependencies Express and SQLite3 and HTML DOM.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PebblesFaith/PetsApp.git"
+  },
+  "keywords": [
+    "Practices",
+    "Pets"
+  ],
+  "author": "Sarai Hannah Ajai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PebblesFaith/PetsApp/issues"
+  },
+  "homepage": "https://github.com/PebblesFaith/PetsApp#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "sqlite3": "^4.1.0"
+  }
+}
