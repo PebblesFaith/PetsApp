@@ -5,7 +5,7 @@ const app = express();
 app.use(express.static('static_files'));
 
 const sqlite3 = require('sqlite3');
-const db = new sqlite3.Database('Pets.db');
+const db = new sqlite3.Database(':memory:');
 
 const port = 3000;
 
