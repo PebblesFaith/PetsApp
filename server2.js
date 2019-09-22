@@ -16,26 +16,17 @@ app.listen(port, function() {
 
     
 
-// Queries
 app.get('/users', function(request, response) {
-    db.all('SELECT name FROM users_to_pets ', processRows);
+    db.all('SELECT name FROM users_to_pets ', function (err, rows) {
+
+        console.log(rows);
+        const allUserNames = rows.map(e => e.name);
+        console.log(allUserNames);
+        response.send(allUserNames); 
   
 
-    function processRows(err, rows) {
-
-        if(err) {
-            console.log("ERROR: " + err.message);
-        }
-        else {
-        
-                console.log(rows);
-                const allUserNames = rows.map(e => e.name);
-                console.log(allUserNames);
-                response.send(allUserNames);
-                
-        }
-
-    };
+    
+    });
     
 });
 
