@@ -42,6 +42,29 @@ $(document).ready(function() {
         });        
     });
 
+    $('#insertButton').click(function() {
+        console.log('Insert Button clicked!!!');
+        $.ajax({
+            url: 'users',
+            type: 'POST',
+            data: {
+                    name: $('#insertNameBox').val(),
+                    job: $('#insertJobBox').val(),
+                    pet: $('#insertPetBox').val(),
+            },
+            success: function(data) {
+                $('#status').html(data.message);                
+            }
+
+
+        });
+        
+    });
+
+
+
+
+
     // What does an AJAX Error Handler means, well, whenever there is an error in making an AJAX call function, as above, if any of these above
     // AJAX functions does not handle correctly then the AJAX function below is a catch-all function for the above
     // AJAX functions. The AJAX Error Handler below says, if something is wrong with the above click handler functions.
